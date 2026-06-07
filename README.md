@@ -8,7 +8,8 @@ Everything here uses synthetic data, so there's no real customer information inv
 
 ## Dashboard preview
 
-![Banking Analytics Dashboard](dashboards)
+![Banking Analytics Dashboard](dashboards/banking_analytics_dashboard_screenshot.jpg)
+
 
 *Executive dashboard showing KPIs, RFM segmentation, AML alerts, churn model scores, and NIM — built to reflect Looker Studio output from the BigQuery views in this repo.*
 
