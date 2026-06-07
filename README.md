@@ -6,6 +6,14 @@ Everything here uses synthetic data, so there's no real customer information inv
 
 ---
 
+## Dashboard preview
+
+![Banking Analytics Dashboard](docs/dashboard_preview.png)
+
+*Executive dashboard showing KPIs, RFM segmentation, AML alerts, churn model scores, and NIM — built to reflect Looker Studio output from the BigQuery views in this repo.*
+
+---
+
 ## What's in here
 
 The project is split into five folders that mirror how a real analytics pipeline would be layered:
@@ -17,6 +25,7 @@ The project is split into five folders that mirror how a real analytics pipeline
 │   ├── 03_analysis/            # The core analytical queries
 │   ├── 04_risk/                # Fraud and AML detection logic
 │   └── 05_reporting/           # Monthly reporting views
+├── dashboards/                 # Looker Studio data source config (JSON)
 ├── docs/                       # Data dictionary and architecture notes
 └── README.md
 ```
@@ -81,10 +90,10 @@ Hibernating        15,672      £430     Very High
 
 **AML flags — last 30 days (illustrative):**
 ```
-Flag type              Transactions    Value (£)     
-High-velocity spend         341         £892,340     
-Round-amount pattern        128       £3,200,000     
-Geographic anomaly           89         £234,110     
+Flag type              Transactions    Value (£)
+High-velocity spend         341         £892,340
+Round-amount pattern        128       £3,200,000
+Geographic anomaly           89         £234,110
 ```
 
 ---
@@ -126,7 +135,7 @@ Minimum IAM roles needed: `BigQuery Data Editor` and `BigQuery Job User`.
 | Google BigQuery | Main data warehouse and SQL engine |
 | Google Cloud Storage | Landing zone for raw data files |
 | BigQuery ML | Churn prediction model — trained in SQL |
-| Looker Studio | Dashboard layer (config files in `/dashboards`) |
+| Looker Studio | Dashboard layer (see `/dashboards`) |
 | dbt | Optional transformation layer — config included if you prefer dbt over raw SQL |
 
 ---
